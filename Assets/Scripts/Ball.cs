@@ -14,12 +14,6 @@ public class Ball : MonoBehaviour
         Launch();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void Launch()
     {
         float xVelocity = Random.Range(0, 2) == 0 ? -1 : 1;

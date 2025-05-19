@@ -28,4 +28,21 @@ public class Ball : MonoBehaviour
             rb.velocity *= velocityMultiplier;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Goal1"))
+        {
+            GameManager.Instance.Paddle2Score();
+            GameManager.Instance.Restart();
+            Launch();
+
+        }
+        else if (collision.gameObject.CompareTag("Goal2"))
+        {
+            GameManager.Instance.Paddle1Score();
+            GameManager.Instance.Restart();
+            Launch();
+        }
+    }
 }

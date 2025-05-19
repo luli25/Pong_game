@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 8623115}
   m_Layer: 0
   m_Name: Goal2
-  m_TagString: Untagged
+  m_TagString: Goal2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 328355310}
   m_Layer: 0
   m_Name: Goal1
-  m_TagString: Untagged
+  m_TagString: Goal1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,8 +1704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b26cb7539c0a44ead08a9949ba36a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1ScoreText: {fileID: 1081801367}
-  player2ScoreText: {fileID: 290329130}
+  paddle1ScoreText: {fileID: 1081801367}
+  paddle2ScoreText: {fileID: 290329130}
   paddle1Transform: {fileID: 2090810457}
   paddle2Transform: {fileID: 304196488}
   ballTransform: {fileID: 368622572}

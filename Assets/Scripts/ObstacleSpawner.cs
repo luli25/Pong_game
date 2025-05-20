@@ -17,14 +17,13 @@ public class ObstacleSpawner : MonoBehaviour
     void Start()
     {
         gameStart = true;
-        Debug.Log(gameStart);
         StartCoroutine(ObstaclesWave());
     }
 
     private void SpawnObstacles()
     {
         float randomX = Random.Range(4f, -5f);
-        float randomY = Random.Range(4f, -2f);
+        float randomY = Random.Range(4f, -3f);
         float timeToDestroy = Random.Range(3f, 8f);
 
         obstacleInstance = Instantiate(obstaclePrefab, new Vector2(randomX, randomY), Quaternion.identity);

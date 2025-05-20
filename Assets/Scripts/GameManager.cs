@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = FindAnyObjectByType<GameManager>();
             }
@@ -39,12 +39,14 @@ public class GameManager : MonoBehaviour
     {
         paddle1Score++;
         paddle1ScoreText.text = paddle1Score.ToString();
+        CheckWinner();
     }
 
     public void Paddle2Score()
     {
         paddle2Score++;
         paddle2ScoreText.text = paddle2Score.ToString();
+        CheckWinner();
     }
 
     public void Restart()
@@ -52,6 +54,21 @@ public class GameManager : MonoBehaviour
         paddle1Transform.position = new Vector2(paddle1Transform.position.x, 0);
         paddle2Transform.position = new Vector2(paddle2Transform.position.x, 0);
         ballTransform.position = Vector2.zero;
+    }
+
+    public void CheckWinner()
+    {
+        if (paddle1Score == 5)
+        {
+            UI_GameOver.Instance.ShowGameOverScreen("Player 1");
+            Time.timeScale = 0;
+        }
+        else if (paddle2Score == 5)
+        {
+            UI_GameOver.Instance.ShowGameOverScreen("Player 2");
+            Time.timeScale = 0;
+        }
+
     }
 
 }

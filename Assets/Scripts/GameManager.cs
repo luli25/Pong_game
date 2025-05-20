@@ -71,4 +71,16 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void RestartGameAfterGameOver()
+    {
+        paddle1Score = 0;
+        paddle2Score = 0;
+        paddle1ScoreText.text = paddle1Score.ToString();
+        paddle2ScoreText.text = paddle2Score.ToString();
+        paddle1Transform.position = new Vector2(paddle1Transform.position.x, 0);
+        paddle2Transform.position = new Vector2(paddle2Transform.position.x, 0);
+        ballTransform.position = Vector2.zero;
+        Time.timeScale = 1;
+    }
+
 }

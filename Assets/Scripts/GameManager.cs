@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour
 
     public void CheckWinner()
     {
-        if (paddle1Score == 5)
+        if (paddle1Score == ScoreManager.maxScore)
         {
             UI_GameOver.Instance.ShowGameOverScreen("Player 1");
             Time.timeScale = 0;
         }
-        else if (paddle2Score == 5)
+        else if (paddle2Score == ScoreManager.maxScore)
         {
             UI_GameOver.Instance.ShowGameOverScreen("Player 2");
             Time.timeScale = 0;

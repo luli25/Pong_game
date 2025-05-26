@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI_GameOver : MonoBehaviour
 {
@@ -15,13 +14,11 @@ public class UI_GameOver : MonoBehaviour
     [SerializeField]
     private TMP_Text winnerPlayerName;
 
-    /*
     [SerializeField]
     private Button restartButton;
 
     [SerializeField]
     private Button mainMenubutton;
-    */
 
     public static UI_GameOver Instance;
 
@@ -53,7 +50,7 @@ public class UI_GameOver : MonoBehaviour
 
     public void MainMenu()
     {
-        Debug.Log("Go to Main Menu Screen");
+        SceneManager.LoadScene("MainMenu");
     }
 
 
